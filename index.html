@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Hangman</title>
+  </head>
+  <body>
+    <h1> The Ultimate Game of Hangman</h1>
+    <h2> Instructions</h1>
+      <p>The rules are simple, player 1 will enter a word.  Player 2 will have 3 minute to guess the correct word.  Every time player 2 guesses a wrong letter a body part will appear. If the entire body is completed player 2 loses. </p>
+    <div id="hidden word" class="letter">
+    <input class="input" type="text" />
+    <input class="input" type="text" />
+    <input class="input" type="text" />
+    <input class="input" type="text" />
+    <input class="input" type="text" />
+    <input class="input" type="text" />
+    <input class="input" type="text" />
+    <input class="input" type="text" />
+    </div>
+    <div id="button">
+    </div>
+    <input class="guess" type="button" />
+    <canvas id = "Stickman"></canvas>
+    <input name="reset" type="button" value="Play Again" onClick="location.reload()">
+    <script src="main.js"></script>
+  </body>
+</html>

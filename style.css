@@ -1,0 +1,17 @@
+body {
+  background-color: rgb(242, 242, 244);
+  background: url(http://i.stack.imgur.com/p9mUO.jpg);
+}
+div {
+  color: black;
+}
+h1 {
+  text-align: center;
+  color: rgb(240, 240, 240);
+}
+h2 {
+  color: rgb(240, 240, 240);
+}
+p{
+  color: rgb(240, 240, 240);
+}
