@@ -1,31 +1,20 @@
-/*<div id="text"></div>
-<button>next</button>*/
-/*var texts = [
-  'one',
-  'two',
-  'three'
-]
-var index = 0
-$(text).html(texts[index])
-$("button").on("click", function(){
-  index++
-  if(index === texts.length){
-    index = 0
-  }
-  $(text).html(texts[index])
-})*/
+
 //window.onload = function (){
 var alphabet = [
   'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i,', 'j', 'k', 'l', 'm', 'n', 'o',
   'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
   console.log(alphabet)
-/*var word = prompt("enter word");
+
 var guess;
-var guesses = [];
+var guesses = alphabet;
 var word;
-var space;*/
+var space = "_";
+var correctGuess;
+var getWord = $(".word").html();
+
 
 var word = prompt("Please enter a word");
+word = document.querySelector('input').innerHTML = "text"
 /*var canvasArray = [head, body, arms, legs];
 var animate = function () {
   canvasArray();
@@ -34,17 +23,29 @@ var word = function () {
   for (i=0; i<word.length; i++) {
     document.querySelector('input').innerHTML = "text"
   }
-}
+}*/
+var guessButton = $("#Guesses" .input)
+guessButton.on("click", function () {
+  var guesses = ("#Guesses .input").val()
+  console.log(guesses)
+  myGuess()
+});
 function myGuess () {
   for (i = 0; i < alphabet.length; i++) {
     var guesses = alphabet[i];
-    if (alphabet[i] === true) {
-      console.log[i] }
-
-      else { canvasArray(); }
+    if (guesses === true) {
+      return guesses }
+      console.log(myGuess('a'))
     }
-  }*/
-
+  }
+  function convertLettersToUnderscores(word){
+    var getWord = $(".word").html();
+   var underscores = ''
+    for(var i = 0; i < word.length; i++){
+     underscores += "_"
+    }
+    return underscores
+  }
 
 var canvas = document.getElementById("Stickman");
 if (canvas.getContext("2d")) {
