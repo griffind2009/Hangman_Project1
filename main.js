@@ -23,26 +23,77 @@ var alphabet = [
 var guess;
 var guesses = [];
 var word;
-var space;
-canvasArray = [head, eyes, body, arms, legs];
+var space;*/
+
+var word = prompt("Please enter a word");
+/*var canvasArray = [head, body, arms, legs];
 var animate = function () {
-  canvasArray[];
-}*/
-var myButtons = function () {
-  buttons = document.getElementById('alphabetButtons');
-  letters = document.createElement('ul');
-  for (i = 0; i < alphabet.length; i++) {
-    letters.id = 'alphabet';
-list = document.createElement('li');
-list.id = 'letter';
-list.innerHTML = alphabet[i];
-check();
-buttons.appendChild(letters);
-letters.appendChild(list);
-console.log(myButtons)
-myButtons();
+  canvasArray();
+}
+var word = function () {
+  for (i=0; i<word.length; i++) {
+    document.querySelector('input').innerHTML = "text"
   }
 }
+function myGuess () {
+  for (i = 0; i < alphabet.length; i++) {
+    var guesses = alphabet[i];
+    if (alphabet[i] === true) {
+      console.log[i] }
+
+      else { canvasArray(); }
+    }
+  }*/
+
+
+var canvas = document.getElementById("Stickman");
+if (canvas.getContext("2d")) {
+context = canvas.getContext("2d");
+
+context.beginPath();
+context.fillStyle = "white";
+context.arc(200, 50, 30, 0, Math.PI * 2, true);
+context.fill();
+
+
+context.beginPath();
+context.strokeStyle = "white";
+context.lineWidth = 3;
+context.arc(200, 50, 20, 0, Math.PI, false);
+context.stroke();
+
+// body
+
+context.beginPath();
+context.moveTo(200, 80);
+context.lineTo(200, 180);
+context.strokeStyle = "white";
+context.stroke();
+
+
+// arms
+
+context.beginPath();
+context.strokeStyle = "white";
+context.moveTo(200, 80);
+context.lineTo(150, 130);
+context.moveTo(200, 80);
+context.lineTo(250, 130);
+context.stroke();
+
+
+// legs
+
+context.beginPath();
+context.strokeStyle = "white";
+context.moveTo(200, 180);
+context.lineTo(150, 280);
+context.moveTo(200, 180);
+context.lineTo(250, 280);
+context.stroke();
+}
+// help from http://www.kodyaz.com/html5/draw-stick-man-in-html5-canvas-using-javascript.aspx
+
 
 /*function togglehiddenWord() {
 
@@ -61,50 +112,9 @@ myButtons();
     word.innerHTML = 'Hide word';
   }
 }*/
-
-var canvas = document.getElementById("Stickman");
-if (canvas.getContext("2d")) {
-context = canvas.getContext("2d");
-
-context.beginPath();
-context.fillStyle = "white";
-context.arc(200, 50, 30, 0, Math.PI * 2, true);
-context.fill();
-
-context.beginPath();
-context.strokeStyle = "white";
-context.lineWidth = 3;
-context.arc(200, 50, 20, 0, Math.PI, false);
-context.stroke();
-
-// body
-context.beginPath();
-context.moveTo(200, 80);
-context.lineTo(200, 180);
-context.strokeStyle = "white";
-context.stroke();
-
-// arms
-context.beginPath();
-context.strokeStyle = "white";
-context.moveTo(200, 80);
-context.lineTo(150, 130);
-context.moveTo(200, 80);
-context.lineTo(250, 130);
-context.stroke();
-
-// legs
-context.beginPath();
-context.strokeStyle = "white";
-context.moveTo(200, 180);
-context.lineTo(150, 280);
-context.moveTo(200, 180);
-context.lineTo(250, 280);
-context.stroke();
-}
-result = function () {
+/*result = function () {
  wordHolder = document.getElementById('hold');
- correct = document.createElement('ul');
+ correct = document.createElement('ul');*/
 
 
 /*$("button").on("click", function() {
