@@ -10,11 +10,11 @@ var guesses = alphabet;
 var word;
 var space = "_";
 var correctGuess;
-var getWord = $(".word").html();
+//var getWord = $(".word .input").html();
 
 
-var word = prompt("Please enter a word");
-word = document.querySelector('input').innerHTML = "text"
+
+//word = document.querySelector('input').innerHTML = "text"
 /*var canvasArray = [head, body, arms, legs];
 var animate = function () {
   canvasArray();
@@ -24,28 +24,75 @@ var word = function () {
     document.querySelector('input').innerHTML = "text"
   }
 }*/
+//document.createElementByClass = ('.word')
+//var getword = (".word").html();
+var guessButton = $("#Guesses").children("input.guess")
+var wordButton = $("#hiddenWord").children("input.word")
 var guessButton = $("#Guesses" .input)
 guessButton.on("click", function () {
-  var guesses = ("#Guesses .input").val()
+  var guesses = ("#Guesses .input").text()
   console.log(guesses)
   myGuess()
 });
+var wordButton = $("#hiddenWord" .input)
+wordButton.on("click", function () {
+  var word = ("#hiddenWord .input").text()
+  console.log(word)
+  myGuess()
+});
+
 function myGuess () {
   for (i = 0; i < alphabet.length; i++) {
     var guesses = alphabet[i];
     if (guesses === true) {
-      return guesses }
-      console.log(myGuess('a'))
+      return guesses
     }
   }
-  function convertLettersToUnderscores(word){
-    var getWord = $(".word").html();
-   var underscores = ''
-    for(var i = 0; i < word.length; i++){
-     underscores += "_"
-    }
-    return underscores
+}
+
+// var getWord = $(".word .input").html();
+function convertLettersToUnderscores(word){
+ var underscores = ''
+  for(var i = 0; i < word.length; i++){
+   underscores += "_"
   }
+  return underscores
+}
+
+// grab the user's input
+var word = prompt("Please enter a word").toLowerCase();
+
+// convert the word to all underscores
+var convertedWord = convertLettersToUnderscores(word)
+
+// player2 enters a letter to guess
+ function guessALetter(){
+  var guess = prompt("Guess a letter").toLowerCase()
+  // if the guessed letter is in the original word
+    var isLetterInWord = word.includes(guess)
+    console.log(isLetterInWord);
+    // reveal the letter in the convertedWord
+    if (isLetterInWord === true){
+      return (guess, convertedWord);
+      console.log(guess, convertedWord)
+      alert("what is guess?!")
+    }
+  // otherwise, mark as an incorrect guess
+  else {
+    canvasArray()
+  }
+    // draw another portion of the stick figure
+}
+
+guessALetter()
+
+
+
+
+
+
+
+
 
 var canvas = document.getElementById("Stickman");
 if (canvas.getContext("2d")) {
