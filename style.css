@@ -4,14 +4,45 @@ body {
 }
 div {
   color: black;
+  margin: 30px;
+  text-align: center;
 }
 h1 {
   text-align: center;
   color: rgb(240, 240, 240);
+  font-size: 36px;
+  margin: 20px 0 20px 5px;
 }
 h2 {
   color: rgb(240, 240, 240);
+  font-size: 30px;
+  margin: 20px 0 20px 10px;
 }
 p{
   color: rgb(240, 240, 240);
+  margin: 20px 0 20px 10px;
+  font-size: 20px;
 }
+
+#buttons {
+  margin: 30px
+  text-align: center;
+}
+//#hiddenWord {
+  display: none;
+}
+#Stickman {
+  float: left;
+  margin: 30px;
+  padding: 10px;
+}
+.clearfix::before {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+//enter a word that is stored and represented by blank spaces
