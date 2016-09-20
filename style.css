@@ -28,9 +28,7 @@ p{
   margin: 30px
   text-align: center;
 }
-//#hiddenWord {
-  display: none;
-}
+
 #Stickman {
   float: left;
   margin: 30px;
@@ -44,5 +42,3 @@ p{
   clear: both;
   height: 0;
 }
-
-//enter a word that is stored and represented by blank spaces
