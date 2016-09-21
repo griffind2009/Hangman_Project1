@@ -57,13 +57,8 @@ context.stroke();
 function guessALetter(){
   var guess = $(".letter-input").val();
   var isLetterInWord = word.includes(guess)
-  $(".letter-input").removeAttr("underscores");
-  console.log(isLetterInWord);
-
-  if (isLetterInWord === word.includes(guess)){
-    return guess;
-    //return $('#guess').val('');
-    //display letter
+  if (isLetterInWord === true){
+    return letter.html('_');
   }
 
   else {
@@ -81,7 +76,7 @@ wordbutton.on("click", function () {
 })
 
 function convertLettersToUnderscores(word){
- var underscores = ''
+ var underscores = '_'
   for(var i = 0; i < word.length; i++){
    underscores += "_"
   }
@@ -91,11 +86,15 @@ function convertLettersToUnderscores(word){
 var guessbutton = $(".guess")
 var letterinput = $(".letter-input")
 guessbutton.on("click", function () {
-  $(".letterinput").val('')
+  letter = letterinput.val(
+  console.log(letterinput.val())
+  )
+  //$(".letterinput").val('')
       guessALetter(letterinput.val())
 })
 function endGame () {
-  if (guess === word) {
+  for (i = 0; i<word.length; i++)
+  if (guesses[i] === wordinput) {
     return true ("You win");
   } else {
     return false;
