@@ -1,4 +1,5 @@
 var guess;
+var guessesLeft = 4;
 var guesses = [];
 var word;
 var alphabet = [
@@ -52,9 +53,10 @@ context.moveTo(200, 180);
 context.lineTo(250, 280);
 context.stroke();
     }
-// help from http://www.kodyaz.com/html5/draw-stick-man-in-html5-canvas-using-javascript.aspx
+// used outline from http://www.kodyaz.com/html5/draw-stick-man-in-html5-canvas-using-javascript.aspx
 
-function guessALetter(){
+//funtion needs to be created to use the parts of the stickman canvas in an array
+function guessALetter() {
   var guess = $(".letter-input").val();
   var isLetterInWord = word.includes(guess)
   if (isLetterInWord === true){
@@ -62,9 +64,8 @@ function guessALetter(){
   }
 
   else {
-    //remove letter
+    //draw a stickmanpart if letter is not in word
   }
-
 }
 
 
@@ -73,6 +74,7 @@ var wordinput = $(".word-input")
 wordbutton.on("click", function () {
   word = wordinput.val()
   convertLettersToUnderscores(wordinput.val())
+
 })
 
 function convertLettersToUnderscores(word){
@@ -92,11 +94,24 @@ guessbutton.on("click", function () {
   //$(".letterinput").val('')
       guessALetter(letterinput.val())
 })
+
+//end game when all the letters in the word have been guessed and displayed or
+//all the parts of the stickman have ben drawn
 function endGame () {
-  for (i = 0; i<word.length; i++)
-  if (guesses[i] === wordinput) {
-    return true ("You win");
+  for (var i = 0; i<word.length; i++)
+  if (letterinput === wordinput || guessesLeft === 0) {
+    return true;
   } else {
     return false;
   }
 }
+//create function to decrease the amount of guesses the player has left
+//function removeGuess() {
+  //for (var i = 0; i < word.length; i++) {
+    //guessesLeft -= 1;
+  //}
+//}
+
+//function decreaseLives () {
+  //for ()
+//}
