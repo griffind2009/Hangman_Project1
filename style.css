@@ -1,44 +1,42 @@
 body {
-  background-color: rgb(242, 242, 244);
-  background: url(http://i.stack.imgur.com/p9mUO.jpg);
+  /*background: url(http://i.stack.imgur.com/p9mUO.jpg);*/
+  background-color: #6A6A6A;
 }
-div {
-  color: black;
-  margin: 30px;
-  text-align: center;
-}
-h1 {
-  text-align: center;
-  color: rgb(240, 240, 240);
-  font-size: 36px;
-  margin: 20px 0 20px 5px;
-}
-h2 {
-  color: rgb(240, 240, 240);
-  font-size: 30px;
-  margin: 20px 0 20px 10px;
-}
-p{
-  color: rgb(240, 240, 240);
-  margin: 20px 0 20px 10px;
-  font-size: 20px;
+hr {
+  border-width: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
 }
 
-#buttons {
-  margin: 30px
-  text-align: center;
+form {
+  max-width: 400px;
 }
 
-#Stickman {
-  float: left;
-  margin: 30px;
-  padding: 10px;
+fieldset {
+  background-color: #eee;
+  border-width: 0;
+  margin: 0;
+  padding: 20px;
 }
-.clearfix::before {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
+fieldset :first-child { margin-top: 0; }
+fieldset :last-child { margin-bottom: 0; }
+
+canvas {
+  background-color: #eee;
+  margin-top: 20px;
 }
+
+.guesses-left { color: #999; }
+
+.word-display {
+  font-size: 3em;
+  text-align: center;
+}
+/*h1,h2{
+  color: white;
+}*/
+#instructions{
+  color: white;
+}
+.word-display span { display: inline-block; }
+.word-display span + span { margin-left: .2em; }

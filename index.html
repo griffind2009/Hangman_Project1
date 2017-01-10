@@ -8,25 +8,41 @@
   <body>
     <h1> The Ultimate Game of Hangman</h1>
     <h2> Instructions</h1>
-      <p>The rules are simple, player 1 will enter a word.  Player 2 will guess a letter in the word. If the letter is correct it will appear, if not a body part will be drawn. If the entire body is completed player 2 loses. </p>
-    <div id = "alphabetButtons" class = "alphabet" />
-  </div>
-    <div id ="hiddenWord">
-      <input class = "word-input" type = "text" placeholder="enter a word" />
-      <input class = "word" type = "button" value="click to hide" />
-    </div>
-    <div id = "Guesses" class="letters">
-    <input class="letter-input" type="text" placeholder="enter a letter" />
-    <input class= "guess" type="button" value = "click to accept"/>
-    <p> Letters Guessed</p>
-    <div id = "letters-guessed"></div>
-    <p>Guesses Left</p>
-  </div>
-    <canvas id = "Stickman"></canvas>
-  <div id="buttons" class="clearfix">
-    <input name="reset" type="button" value="Play Again" onClick="location.reload()">
-  </div>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="main.js"></script>
-  </body>
-</html>
+      <p class="instructions">The rules are simple, player 1 will enter a word.  Player 2 will guess a letter in the word. If the letter is correct it will appear, if not a body part will be drawn. If the entire body is completed player 2 loses.</p>
+
+      <hr />
+
+      <form id="word-form" action="." method="POST">
+        <fieldset>
+          <p><strong>Player 1:</strong> please enter a word.</p>
+          <input type="text" name="word" id="word-input" placeholder="enter a word" required />
+          <button type="submit" id="word-submit">Use Word</button>
+        </fieldset>
+      </form>
+
+      <form id="letter-form" action="." method="POST">
+        <fieldset>
+          <p><strong>Player 2:</strong> please guess a letter.</p>
+          <input type="text" name="letter" id="letter-input" placeholder="Enter a letter" maxlength="1" required />
+          <button type="submit" id="letter-submit">Check Letter</button>
+          <span class="guesses-left">
+            <strong id="guesses-left-amount">-</strong>
+            guesses left
+          </span>
+        </fieldset>
+
+        <canvas id="stickman" width="400" height="300"></canvas>
+
+        <div id="word-display" class="word-display"></div>
+      </form>
+
+      <hr />
+
+      <div id="buttons" class="clearfix">
+        <button type="button" onClick="window.location.reload();">Play Again</button>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="./main.js"></script>
+    </body>
+  </html>
