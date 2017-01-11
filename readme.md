@@ -13,11 +13,3 @@ page a little with CSS.  I then dove into the JavaScript
 I first laid out the outline in HTML and did minor styling with CSS.  I then
 began the JavaScript.  I used an alphabet array for player 2 to choose a letter.  
 Next, I started on the functionality of the game.
-
-The unsolved issues are the following:
--the the letter-input does not automatically refresh and accept another letter.
- The "stickman" is not tied to a function therefore it stays on in the browser
- once the page is loaded, rather than appear if an incorrect letter is guessed.  
- The word -display is not at the bottom of the screen, but in the
- wordinput section.
--The game does not determine a winner or loser.  
